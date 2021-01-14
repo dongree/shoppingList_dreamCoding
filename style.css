@@ -1,0 +1,53 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  background: linear-gradient(45deg, #eb4d4b, #7ed6df);
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.listBox {
+  height: 80%;
+  margin: 0;
+  padding: 10px 30px;
+  list-style: none;
+  background-color: #dcdde1;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.inputBox {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.end {
+  background: linear-gradient(45deg, #eb4d4b, #7ed6df);
+  text-align: center;
+}
+
+.addBtn i {
+  font-size: 50px;
+}
