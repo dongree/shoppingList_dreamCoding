@@ -1,16 +1,59 @@
 'use strict'
 
-const plusBtn = document.querySelector('.addBtn');
-const inputBox = document.querySelector('.inputBox');
-const listBox = document.querySelector('.listBox');
-const trashBtn = document.querySelector('.trashBtn');
+const plusBtn = document.querySelector('.footer__button');
+const input = document.querySelector('.footer__input');
+const items = document.querySelector('.items');
 
-// 리스트 추가
+
+function onAdd() {
+    const text = input.value;
+    if(text === ''){
+        input.focus();
+        return;
+    }
+    const item = createItem(text);
+    items.appendChild(item);
+    item.scrollIntoView({block: 'center'});
+    input.value = '';
+    input.focus();
+}
+
+
+function createItem(text) {
+    const itemRow = document.createElement('li');
+    itemRow.setAttribute('class', 'item__row');
+
+    const item = document.createElement('div');
+    item.setAttribute('class', 'item');
+
+    const name = document.createElement('span');
+    name.setAttribute('class', 'item__name');
+    name.innerText = text;
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.setAttribute('class', 'trashBtn');
+    deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>'
+    deleteBtn.addEventListener('click', ()=> {
+        items.removeChild(itemRow)
+    })
+
+    const itemDivider = document.createElement('div');
+    itemDivider.setAttribute('class', 'item__divider');
+
+    item.appendChild(name);
+    item.appendChild(deleteBtn);
+
+    itemRow.appendChild(item)
+    itemRow.appendChild(itemDivider);
+    return itemRow;
+}
+
 plusBtn.addEventListener('click', ()=>{
-    listBox.innerHTML += `<li>${inputBox.value}<button class='trashBtn'><i class="fas fa-trash-alt"></i></button></li>`;
+    onAdd();
 })
 
-// 리스트 삭제(미완성)
-// trashBtn.addEventListener('click', ()=>{
-//     console.log('haha');
-// })
+input.addEventListener('keypress', (event)=>{
+    if(event.key === 'Enter'){
+        onAdd();
+    }
+})

@@ -1,53 +1,106 @@
-html,
-body {
-  height: 100%;
+* {
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  box-sizing: border-box;
+ul {
+  padding: 0;
 }
 
 button {
   border: none;
-  background: none;
+  background: transparent;
   outline: none;
   cursor: pointer;
 }
 
-.title {
-  background: linear-gradient(45deg, #eb4d4b, #7ed6df);
-  font-size: 25px;
+body {
+  background-color: #ced3df;
+  margin: 0;
   text-align: center;
+}
+
+.list {
+  width: 400px;
+  margin: auto;
+  background-color: #dcdde1;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 3px 5px 5px rgba(0, 0, 0, 0.66);
+  box-shadow: 5px 3px 5px 5px rgba(0, 0, 0, 0.66);
+}
+
+.header {
+  background: rgb(255, 135, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 135, 0, 1) 20%,
+    rgba(0, 212, 255, 1) 75%,
+    rgba(9, 9, 121, 1) 100%
+  );
+  height: 48px;
+  font-size: 25px;
   padding: 10px;
+  border-radius: 20px 20px 0 0;
   color: white;
 }
 
-.listBox {
-  height: 80%;
-  margin: 0;
-  padding: 10px 30px;
-  list-style: none;
-  background-color: #dcdde1;
+.items {
+  height: 500px;
+  overflow-y: auto; /* 아이템들이 많아지면 스크롤바 생성 */
 }
 
-li {
+.item {
   display: flex;
   justify-content: space-between;
-  margin: 5px 0;
+  padding: 8px 32px;
 }
 
-.inputBox {
+.item__divider {
+  width: 90%;
+  height: 1px;
+  background-color: lightgray;
+  margin: auto;
+}
+
+.trashBtn {
+  transition: all 300ms ease-in;
+  font-size: 18px;
+}
+
+.trashBtn:hover {
+  color: skyblue;
+  transform: scale(1.1);
+}
+
+.footer {
+  background: rgb(255, 135, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 135, 0, 1) 20%,
+    rgba(0, 212, 255, 1) 75%,
+    rgba(9, 9, 121, 1) 100%
+  );
+  border-radius: 0 0 20px 20px;
+}
+
+.footer__input {
   width: 100%;
+  height: 32px;
   border: none;
   outline: none;
+  font-size: 24px;
+  padding: 0 16px;
 }
 
-.end {
-  background: linear-gradient(45deg, #eb4d4b, #7ed6df);
-  text-align: center;
+.footer__button {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  transition: transform 300ms ease-in;
 }
 
-.addBtn i {
-  font-size: 50px;
+.footer__button:hover {
+  transform: scale(1.1);
 }
