@@ -16,7 +16,7 @@ HTML, CSS, 바닐라 JS로 웹페이지 구현
 
 ## 스크린샷
 
-<img src= 'img/capture1.png' height='500'>
+<img src= "img/capture1.png" width="60%">
 
 ---
 
