@@ -12,9 +12,7 @@ HTML, CSS, 바닐라 JS로 웹페이지 구현
 
 ## 스크린샷
 
-<!-- <img src= "img/capture1.png" width="60%"> -->
-
-![caputer1](img/capture1.png)
+<img src= "https://user-images.githubusercontent.com/68095803/104799403-319d9a80-5812-11eb-85a0-1cd8aa683abf.PNG" width="60%">
 
 ## 알게된 점
 
